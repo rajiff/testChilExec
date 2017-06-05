@@ -1,7 +1,7 @@
 const child_process = require('child_process');
 const _ = require('lodash');
 const path = require('path');
-const CHILD_PROCESS_MAX_DURATION = 5000;
+const CHILD_PROCESS_MAX_DURATION = 1000;
 
 let executeCMD = function(cmd, input, callback) {
   cmd = './' + cmd;
@@ -29,12 +29,12 @@ let executeCMD = function(cmd, input, callback) {
     stderr += data.toString();
   });
 
-  cmdProcess.on('close', (exitCode) => {
+  /*cmdProcess.on('close', (exitCode) => {
     cmdProcess = null;
     console.log('Process (', cmd, ') closed with code:', exitCode);
     clearTimeOutHandler();
     callback(null, {stdout, stderr, exitCode});
-  });
+  });*/
 
   cmdProcess.on('exit', (exitCode) => {
     cmdProcess = null;

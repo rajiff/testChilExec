@@ -1,0 +1,16 @@
+{
+  "name": "testChilExec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sleep.js",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
